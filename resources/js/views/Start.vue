@@ -1,5 +1,5 @@
 <template>
-    <div>Some random text. Another text</div>
+
 
 </template>
 
