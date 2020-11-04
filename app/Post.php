@@ -13,7 +13,6 @@ class Post extends Model
     {
         parent::boot();
         static::addGlobalScope(new ReverseScope());
-
     }
 
     public function user()

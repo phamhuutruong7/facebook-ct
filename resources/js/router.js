@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Start from './views/Start';
-import NewsFeed from "./views/NewsFeed";
+import NewsFeed from './views/NewsFeed';
 
 Vue.use(VueRouter);
 

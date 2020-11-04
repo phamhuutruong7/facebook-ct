@@ -13,7 +13,12 @@
 
 Auth::routes();
 
+/*Route::get('index','PostController@index');*/
 Route::get('{any}', 'AppController@index')
     ->where('any', '.*')
     ->middleware('auth')
     ->name('home');
+
+Route::get('/logout-manual', function(){
+    request()->session()->invalidate();
+});

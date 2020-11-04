@@ -4,6 +4,7 @@ namespace Tests\Feature;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
+use Illuminate\Support\Facades\Auth;
 use Tests\TestCase;
 use App\User;
 use App\Post;
@@ -19,6 +20,7 @@ class RetrievePostsTest extends TestCase
         $this->actingAs($user = factory(User::class)->create(), 'api');
         $posts = factory(Post::class, 2)->create(['user_id' => $user->id]);
         $response = $this->get('/api/posts');
+
         $response->assertStatus(200)
             ->assertJson([                  //because there will be 2 posts
                 'data' => [
