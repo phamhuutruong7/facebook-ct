@@ -10,7 +10,7 @@
     import Post from '../components/Post';
 
     export default {
-        name: "NewsFeed.vue",
+        name: "NewsFeed",
         components: {
             NewPost,
             Post
@@ -23,7 +23,7 @@
         mounted(){
             axios.get('/api/posts')
                 .then(res => {
-                    this.posts = red.data;
+                    this.posts = res.data;
                 })
                 .catch(error => {
                     console.log('Unable to fetch posts');

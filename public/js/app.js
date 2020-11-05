@@ -2137,7 +2137,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: "NewsFeed.vue",
+  name: "NewsFeed",
   components: {
     NewPost: _components_NewPost__WEBPACK_IMPORTED_MODULE_0__["default"],
     Post: _components_Post__WEBPACK_IMPORTED_MODULE_1__["default"]
@@ -2151,7 +2151,7 @@ __webpack_require__.r(__webpack_exports__);
     var _this = this;
 
     axios.get('/api/posts').then(function (res) {
-      _this.posts = red.data;
+      _this.posts = res.data;
     })["catch"](function (error) {
       console.log('Unable to fetch posts');
     });
